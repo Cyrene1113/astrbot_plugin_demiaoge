@@ -1,0 +1,4 @@
+# 德谬歌示例配置；不要在此文件写入 Cookie 或 token。
+debug_log: false
+wiki_data_dir: data/wiki
+credential_backend: system_keyring

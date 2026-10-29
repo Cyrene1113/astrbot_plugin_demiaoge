@@ -1,0 +1,62 @@
+{
+  "adapter": {
+    "type": "string",
+    "description": "数据适配器",
+    "hint": "mihomo=线上 Mihomo API；mock=离线调试",
+    "default": "mihomo"
+  },
+  "master_key": {
+    "type": "string",
+    "description": "凭据加密主密钥",
+    "hint": "留空则读环境变量 DEMIAOGE_MASTER_KEY；未配置时绑定功能禁用",
+    "default": ""
+  },
+  "http_enabled": {
+    "type": "bool",
+    "description": "启用公共查询端口",
+    "hint": "按 UID 返回练度 JSON/面板 PNG，仅本机监听时无凭据风险",
+    "default": true
+  },
+  "http_host": {
+    "type": "string",
+    "description": "HTTP 监听地址",
+    "hint": "对外提供请自行评估风险",
+    "default": "127.0.0.1"
+  },
+  "http_port": {
+    "type": "int",
+    "description": "HTTP 端口",
+    "hint": "/hsr/profile 与 /hsr/profile.png",
+    "default": 8765
+  },
+  "cache_ttl_minutes": {
+    "type": "int",
+    "description": "面板数据缓存分钟",
+    "hint": "同 UID 查询在 TTL 内直接用缓存",
+    "default": 10
+  },
+  "auto_update": {
+    "type": "bool",
+    "description": "每日自动核对 Wiki 数据",
+    "hint": "每天固定时间从 BWiki 拉取最新角色/光锥/遗器资料，校验清洗后与本地数据核对入库；失败自动保留本地数据。需要互联网。",
+    "default": true
+  },
+  "auto_update_time": {
+    "type": "string",
+    "description": "每日核对时间（HH:MM）",
+    "hint": "24 小时制。建议选低峰时段；抓取全程限速并随机抖动，约 5-10 分钟完成。",
+    "default": "04:30"
+  },
+  "edge_path": {
+    "type": "string",
+    "description": "Edge 浏览器路径",
+    "hint": "留空自动探测",
+    "default": ""
+  },
+  "admins": {
+    "type": "list",
+    "description": "管理员 ID 列表",
+    "hint": "可用 /hsr 更新缓存、/hsr 更新数据",
+    "default": []
+  }
+}

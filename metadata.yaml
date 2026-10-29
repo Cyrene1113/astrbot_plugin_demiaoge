@@ -1,0 +1,11 @@
+name: 德谬歌
+display_name: 德谬歌
+desc: 崩坏：星穹铁道 UID/扫码绑定、角色练度面板图与 Wiki 查询插件
+help: 使用 /hsr help 查看帮助；支持账号绑定、角色面板与 Wiki 查询。
+version: v0.4.1
+author: AstrBot
+auto_update: false
+repo: ""
+support_platforms:
+  - aiocqhttp
+astrbot_version: ">=4.0.0"
